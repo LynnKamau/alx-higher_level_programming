@@ -1,1 +1,1 @@
-THIS IS THE README.md FILE
+# Solution to tasks on Python - Inheritance
