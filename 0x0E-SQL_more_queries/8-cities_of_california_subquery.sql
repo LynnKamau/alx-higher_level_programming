@@ -1,7 +1,12 @@
--- lists all the cities of California that can be found in the database hbtn_0d_usa.
--- The states table contains only one record where name = California
--- Results must be sorted in ascending order by cities.id
--- You are not allowed to use the JOIN keyword
--- The database name will be passed as an argument of the mysql command
-
-SELECT id, name FROM cities WHERE state_id = (SELECT id FROM states WHERE name = "California") ORDER BY id;
+-- List all cities of CA that can be found in db 'hbtn_0d_usa'
+-- 'states' table contains only one record where 'name = California'
+-- but 'id' cant be different
+-- Results must be sorted in ascending order by 'cities.id'
+-- Not allowed to use JOIN keyword
+SELECT id, name
+FROM cities
+WHERE state_id = (
+      SELECT id
+      FROM states
+      WHERE name = 'California'
+);
